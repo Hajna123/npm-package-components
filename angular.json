@@ -123,6 +123,90 @@
           }
         }
       }
-    }},
-  "defaultProject": "library-packages"
+    },
+    "example-library": {
+      "projectType": "library",
+      "root": "projects/example-library",
+      "sourceRoot": "projects/example-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/example-library/tsconfig.lib.json",
+            "project": "projects/example-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/example-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/example-library/src/test.ts",
+            "tsConfig": "projects/example-library/tsconfig.spec.json",
+            "karmaConfig": "projects/example-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/example-library/tsconfig.lib.json",
+              "projects/example-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "feed-qb-example-library": {
+      "projectType": "library",
+      "root": "projects/feed-qb-example-library",
+      "sourceRoot": "projects/feed-qb-example-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/feed-qb-example-library/tsconfig.lib.json",
+            "project": "projects/feed-qb-example-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/feed-qb-example-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/feed-qb-example-library/src/test.ts",
+            "tsConfig": "projects/feed-qb-example-library/tsconfig.spec.json",
+            "karmaConfig": "projects/feed-qb-example-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/feed-qb-example-library/tsconfig.lib.json",
+              "projects/feed-qb-example-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "library-packages",
+  "cli": {
+    "analytics": "64e40ff2-77a5-4a5a-8772-48221f8f87c7"
+  }
 }

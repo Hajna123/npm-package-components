@@ -14,7 +14,17 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "example-library": [
+        "dist/example-library/example-library",
+        "dist/example-library"
+      ],
+      "feed-qb-example-library": [
+        "dist/feed-qb-example-library/feed-qb-example-library",
+        "dist/feed-qb-example-library"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
