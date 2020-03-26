@@ -203,6 +203,46 @@
           }
         }
       }
+    },
+    "feed-qb-checkbox": {
+      "projectType": "library",
+      "root": "projects/feed-qb-checkbox",
+      "sourceRoot": "projects/feed-qb-checkbox/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/feed-qb-checkbox/tsconfig.lib.json",
+            "project": "projects/feed-qb-checkbox/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/feed-qb-checkbox/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/feed-qb-checkbox/src/test.ts",
+            "tsConfig": "projects/feed-qb-checkbox/tsconfig.spec.json",
+            "karmaConfig": "projects/feed-qb-checkbox/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/feed-qb-checkbox/tsconfig.lib.json",
+              "projects/feed-qb-checkbox/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "library-packages",

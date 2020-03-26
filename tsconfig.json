@@ -23,6 +23,10 @@
       "feed-qb-example-library": [
         "dist/feed-qb-example-library/feed-qb-example-library",
         "dist/feed-qb-example-library"
+      ],
+      "feed-qb-checkbox": [
+        "dist/feed-qb-checkbox/feed-qb-checkbox",
+        "dist/feed-qb-checkbox"
       ]
     }
   },
